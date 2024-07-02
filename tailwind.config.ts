@@ -1,20 +1,109 @@
-import type { Config } from "tailwindcss";
+/** @type {import('tailwindcss').Config} */
+import { nextui } from "@nextui-org/react";
 
-const config: Config = {
+module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      screens: {
+        xxl: "1728px",
+        xl: "1440px",
+        lg: "1024px",
+        md: "768px",
+        sm: "640px",
+        xs: "320px",
+      },
+      boxShadow: {
+        "papa-sm": "0px 10px 16px 0px rgba(0, 0, 0, 0.04)",
+        "papa-input": "-5px 5px 20px 0px rgba(0, 0, 0, 0.05)",
+      },
+      width: {
+        smallBox: "var(--w-smallBox)",
+        middleBox: "var(--w-middleBox)",
+        largeBox: "var(--w-largeBox)",
+        sidebar: "var(--w-sidebar)",
+        content: "var(--w-content)",
+        excludeSidebar: "var(--w-excludeSidebar)",
+      },
+      height: {
+        header: "var(--h-header)",
+        footer: "var(--h-footer)",
+        ssBox: "var(--h-ssBox)",
+        smallBox: "var(--h-smallBox)",
+        middleBox: "var(--h-middleBox)",
+        largeBox: "var(--h-largeBox)",
+      },
+      minWidth: {
+        smallBox: "var(--w-smallBox)",
+        middleBox: "var(--w-middleBox)",
+        largeBox: "var(--w-largeBox)",
+        sidebar: "var(--w-sidebar)",
+        content: "var(--w-content)",
+        excludeSidebar: "var(--w-excludeSidebar)",
+      },
+      minHeight: {
+        header: "var(--h-header)",
+        footer: "var(--h-footer)",
+        smallBox: "var(--h-smallBox)",
+        middleBox: "var(--h-middleBox)",
+        largeBox: "var(--h-largeBox)",
+      },
+      maxWidth: {
+        smallBox: "var(--w-smallBox)",
+        middleBox: "var(--w-middleBox)",
+        largeBox: "var(--w-largeBox)",
+        sidebar: "var(--w-sidebar)",
+        content: "var(--w-content)",
+        excludeSidebar: "var(--w-excludeSidebar)",
+      },
+      maxHeight: {
+        header: "var(--h-header)",
+        footer: "var(--h-footer)",
+        smallBox: "var(--h-smallBox)",
+        middleBox: "var(--h-middleBox)",
+        largeBox: "var(--h-largeBox)",
+      },
+      borderRadius: {
+        sm: "0.25rem",
+        md: "0.5rem",
+        lg: "0.75rem",
+        xl: "1rem",
+        "2xl": "1.5rem",
+      },
+      padding: {
+        sm: "0.25rem",
+        md: "0.5rem",
+        lg: "0.75rem",
+      },
+      gap: {
+        sm: "0.25rem",
+        md: "0.5rem",
+        lg: "1.5rem",
+        xl: "2rem",
+        xxl: "2.5rem",
+      },
+      colors: {
+        layout_background: "var(--layout-background)",
+        layout_divider: "var(--layout-divider)",
+        layout_black: "var(--layout-black)",
+        layout_white: "var(--layout-white)",
+        txt: "var(--txt)",
+      },
+      gridTemplateColumns: {
+        list: "665fr 222fr 115fr 115fr 115fr",
+      },
+      zIndex: {
+        dropdown: 100,
+        backdrop: 150,
+        modal: 200,
+        toast: 250,
       },
     },
   },
-  plugins: [],
+  plugins: [nextui()],
 };
-export default config;

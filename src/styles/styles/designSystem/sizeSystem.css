@@ -1,0 +1,15 @@
+:root {
+  --w-smallBox: 12.5rem;
+  --w-mediumBox: 18.75rem;
+  --w-largeBox: 25rem;
+  --w-sidebar: 14.25rem;
+  --w-content: 80rem;
+  --w-excludeSidebar: 65.75rem;
+
+  --h-header: 4.75rem;
+  --h-footer: 6.25rem;
+  --h-ssBox: 6.25rem;
+  --h-smallBox: 12.5rem;
+  --h-mediumBox: 18.75rem;
+  --h-largeBox: 25rem;
+}

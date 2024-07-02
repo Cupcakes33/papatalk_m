@@ -20,3 +20,13 @@ export default function RootLayout({
     </html>
   );
 }
+
+export const viewport = {
+  width: "device-width",
+  viewportFit: "cover",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
+// 컴포넌트를 나누는 기준은 렌더링 단위

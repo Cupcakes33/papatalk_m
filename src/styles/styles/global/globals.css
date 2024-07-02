@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-size: 1rem;
+  font-family:
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
+  font-feature-settings: "tnum", "ss01", "ss02", "ss05", "ss08";
+}
+
+.min-h-body {
+  min-height: calc(100vh - 200px);
+}
+
+/* 모바일 컨테이너 디폴트 360픽텔 -> rem 으로 계산해야함. */
+/* 22.5rem */
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  font-size: calc(4.4444444444444444444444445vw);
+  user-select: none;
+}
+
+/* 전체 vw 가 4.4444vw 라면 */
+/* 전체가 360 픽셀이라고 하면 4.444vw 이 16픽셀인데 전체 화면이 커지더라도 vw가 400이 되어도 font-size가 4.4444 로 늘어나게된다. */
+/* 1rem */
